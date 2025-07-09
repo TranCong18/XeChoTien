@@ -14,7 +14,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 h-[72px] flex items-center justify-between">
         {/* Navigation Split */}
         <div className="hidden md:flex flex-1 justify-start items-center gap-8 text-sm text-black">
-          <Link href="#about" className="hover:text-red-600">
+          <Link href="/about" className="hover:text-red-600">
             Về Kia
           </Link>
           <Link href="#products" className="hover:text-red-600">
@@ -107,7 +107,7 @@ export default function Header() {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-white px-4 pb-4 space-y-3 text-sm font-medium text-black">
-          <Link href="#about" className="block hover:text-red-600">
+          <Link href="/about" className="block hover:text-red-600">
             Về Kia
           </Link>
           <Link href="#products" className="block hover:text-red-600">
