@@ -4,7 +4,7 @@ const cloudinary = require("../utils/cloudinary");
 
 exports.createProduct = async (req, res) => {
   try {
-    const { name, category, price, seats, transmission, fuel, desc } = req.body;
+    const { name, category, seats, transmission, fuel, desc } = req.body;
 
     // Upload ảnh lên Cloudinary nếu có ảnh
     let imageUrl = "";
@@ -18,7 +18,7 @@ exports.createProduct = async (req, res) => {
     const product = new Product({
       name,
       category,
-      price,
+
       seats,
       transmission,
       fuel,
