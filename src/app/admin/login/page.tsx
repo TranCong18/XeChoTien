@@ -2,51 +2,57 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { loginAdmin } from "@/services/adminService";
 
 export default function LoginAdminPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const res = await loginAdmin(email, password);
-      localStorage.setItem("adminToken", res.token);
+    // Mock login: username 'admin', password '123456'
+    if (username === "admin" && password === "123456") {
+      document.cookie = "admin_auth=true; path=/";
       router.push("/admin/dashboard");
-    } catch (err: any) {
-      setError(err?.response?.data?.message || "Đăng nhập thất bại");
+    } else {
+      setError("Sai tài khoản hoặc mật khẩu");
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-20 bg-white shadow p-8 rounded">
-      <h2 className="text-2xl font-bold mb-4 text-center">Đăng nhập Admin</h2>
-      {error && <p className="text-red-500 mb-2">{error}</p>}
-      <form onSubmit={handleLogin} className="space-y-4">
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full p-2 border rounded"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Mật khẩu"
-          className="w-full p-2 border rounded"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-800"
-        >
-          Đăng nhập
-        </button>
-      </form>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#b8001c] via-black to-white">
+      <div className="max-w-md w-full bg-white/90 shadow-2xl rounded-3xl p-8">
+        <h2 className="text-3xl font-extrabold text-center mb-6 text-[#b8001c] drop-shadow">
+          Đăng nhập Admin
+        </h2>
+        {error && (
+          <p className="text-red-600 text-center mb-4 font-semibold">{error}</p>
+        )}
+        <form onSubmit={handleLogin} className="space-y-6">
+          <input
+            type="text"
+            placeholder="Tài khoản"
+            className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#b8001c] text-lg text-black placeholder:text-gray-400"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            autoFocus
+          />
+          <input
+            type="password"
+            placeholder="Mật khẩu"
+            className="w-full p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#b8001c] text-lg text-black placeholder:text-gray-400"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            type="submit"
+            className="w-full bg-gradient-to-r from-[#b8001c] to-black text-white py-3 rounded-xl font-bold text-lg shadow hover:scale-105 transition"
+          >
+            Đăng nhập
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
