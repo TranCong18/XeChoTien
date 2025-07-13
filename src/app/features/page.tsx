@@ -144,23 +144,23 @@ export default function FeaturesPage() {
 
   return (
     <DefaultLayout>
-      <div className="min-h-screen bg-gradient-to-b from-[#1a1a1a] via-[#2d2d2d] to-[#f8f8f8]">
+      <section className="relative bg-gradient-to-r from-[#17877b] to-[#7ee8c7] text-white py-20 overflow-hidden mb-0">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-r from-[#b8001c] to-[#1a1a1a] text-white py-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-20 bg-[url('/images/cars/test2-removebg-preview.png')] bg-no-repeat bg-right bg-contain pointer-events-none" />
-          <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
-            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
-              Ưu điểm nổi bật
-            </h1>
-            <p className="text-2xl md:text-3xl text-red-100 max-w-2xl mx-auto mb-8 font-medium">
-              Khám phá những tính năng vượt trội làm nên sự khác biệt của KIA
-            </p>
-            <button className="mt-4 px-10 py-4 bg-white text-[#b8001c] font-bold rounded-full shadow-xl text-lg hover:bg-[#b8001c] hover:text-white transition-colors duration-300">
-              Đặt lịch lái thử ngay
-            </button>
-          </div>
-        </section>
+        <div className="absolute inset-0 opacity-20 bg-[url('/images/cars/test2-removebg-preview.png')] bg-no-repeat bg-right bg-contain pointer-events-none" />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
+            Ưu điểm nổi bật
+          </h1>
+          <p className="text-2xl md:text-3xl text-red-100 max-w-2xl mx-auto mb-8 font-medium">
+            Khám phá những tính năng vượt trội làm nên sự khác biệt của KIA
+          </p>
+          <button className="mt-4 px-10 py-4 bg-white text-[#b8001c] font-bold rounded-full shadow-xl text-lg hover:bg-[#b8001c] hover:text-white transition-colors duration-300">
+            Liên hệ ngay
+          </button>
+        </div>
+      </section>
 
+      <div className="min-h-screen bg-[#f7f7fa]">
         {/* Features Grid */}
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4">
@@ -220,45 +220,41 @@ export default function FeaturesPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="bg-gradient-to-r from-[#b8001c] to-[#1a1a1a] text-white py-20">
-          <div className="max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-lg">
-              Sẵn sàng trải nghiệm?
-            </h2>
-            <p className="text-xl md:text-2xl text-red-100 mb-8 max-w-2xl mx-auto font-medium">
-              Liên hệ với chúng tôi ngay hôm nay để được tư vấn và đặt lịch lái thử xe KIA
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-white text-[#b8001c] hover:bg-[#b8001c] hover:text-white border-2 border-white px-10 py-4 rounded-full font-bold text-lg shadow-xl transition-colors duration-300">
-                Đặt lịch lái thử
-              </button>
-              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#b8001c] px-10 py-4 rounded-full font-bold text-lg shadow-xl transition-colors duration-300">
-                Liên hệ tư vấn
-              </button>
-            </div>
-          </div>
-        </section>
-
         {/* Stats Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
               <div>
-                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">15+</div>
-                <div className="text-gray-600 text-lg font-medium">Năm kinh nghiệm</div>
+                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">
+                  15+
+                </div>
+                <div className="text-gray-600 text-lg font-medium">
+                  Năm kinh nghiệm
+                </div>
               </div>
               <div>
-                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">50+</div>
-                <div className="text-gray-600 text-lg font-medium">Đại lý toàn quốc</div>
+                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">
+                  50+
+                </div>
+                <div className="text-gray-600 text-lg font-medium">
+                  Đại lý toàn quốc
+                </div>
               </div>
               <div>
-                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">100K+</div>
-                <div className="text-gray-600 text-lg font-medium">Khách hàng hài lòng</div>
+                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">
+                  100K+
+                </div>
+                <div className="text-gray-600 text-lg font-medium">
+                  Khách hàng hài lòng
+                </div>
               </div>
               <div>
-                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">24/7</div>
-                <div className="text-gray-600 text-lg font-medium">Hỗ trợ khách hàng</div>
+                <div className="text-5xl font-extrabold text-[#b8001c] mb-2">
+                  24/7
+                </div>
+                <div className="text-gray-600 text-lg font-medium">
+                  Hỗ trợ khách hàng
+                </div>
               </div>
             </div>
           </div>
