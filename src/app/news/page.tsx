@@ -21,15 +21,15 @@ export default function NewsListPage() {
   return (
     <DefaultLayout>
       {/* Banner Section */}
-      <section className="relative bg-gradient-to-r from-[#b8001c] to-[#1a1a1a] text-white py-20 overflow-hidden mb-0">
+      <section className="relative bg-gradient-to-r from-[#17877b] to-[#7ee8c7] text-white py-20 overflow-hidden mb-0">
         <div className="absolute inset-0 opacity-20 bg-[url('/images/cars/test2-removebg-preview.png')] bg-no-repeat bg-right bg-contain pointer-events-none" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
             Bài viết nổi bật
           </h1>
           <p className="text-2xl md:text-3xl text-red-100 max-w-2xl mx-auto font-medium mb-6">
-            Tổng hợp các bài viết chia sẻ về kinh nghiệm, sản phẩm, dịch vụ mới nhất
-            từ NIAD.
+            Tổng hợp các bài viết chia sẻ về kinh nghiệm, sản phẩm, dịch vụ mới
+            nhất từ NIAD.
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
             <span className="px-4 py-2 bg-white/10 rounded-full text-base font-medium text-white border border-white/20 cursor-pointer hover:bg-white/20 hover:text-yellow-200 transition">
@@ -47,13 +47,15 @@ export default function NewsListPage() {
           </div>
         </div>
       </section>
-      <div className="w-full min-h-screen bg-gradient-to-b from-[#232325] via-[#232325] via-60% to-[#f7f7fa] pt-12 pb-24">
+      <div className="w-full min-h-screen bg-[#f7f7fa] pt-12 pb-24">
         <div className="max-w-5xl mx-auto py-8 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left sidebar (optional) */}
           <aside className="hidden md:block col-span-1">
             <div className="sticky top-28 space-y-4">
               <div className="bg-white rounded-2xl shadow border border-gray-100 p-4 text-center">
-                <div className="text-lg font-bold text-[#b8001c] mb-2">Danh mục</div>
+                <div className="text-lg font-bold text-[#b8001c] mb-2">
+                  Danh mục
+                </div>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li>
                     <a href="#" className="hover:text-red-600">
@@ -80,7 +82,8 @@ export default function NewsListPage() {
               <div className="bg-gradient-to-r from-[#b8001c] to-[#1a1a1a] rounded-2xl p-4 text-white shadow text-center">
                 <div className="font-bold text-lg mb-2">Đăng ký nhận tin</div>
                 <p className="text-sm mb-3">
-                  Nhận thông báo về sản phẩm, ưu đãi và sự kiện mới nhất từ NIAD.
+                  Nhận thông báo về sản phẩm, ưu đãi và sự kiện mới nhất từ
+                  NIAD.
                 </p>
                 <input
                   type="email"

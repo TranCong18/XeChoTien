@@ -20,9 +20,23 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 h-[80px] flex items-center justify-between">
           {/* Navigation Split */}
           <div className="hidden md:flex flex-1 justify-start items-center gap-10 text-base font-semibold tracking-widest uppercase text-black relative">
-            <Link href="/" className="flex items-center hover:text-red-600 transition-colors duration-200 header-link mr-2">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 mr-1">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l9-7 9 7M4.5 10.5V19a1.5 1.5 0 001.5 1.5h3A1.5 1.5 0 0010.5 19V15a1.5 1.5 0 011.5-1.5h0A1.5 1.5 0 0113.5 15v4a1.5 1.5 0 001.5 1.5h3A1.5 1.5 0 0020 19v-8.5" />
+            <Link
+              href="/"
+              className="flex items-center hover:text-red-600 transition-colors duration-200 header-link mr-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6 mr-1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 12l9-7 9 7M4.5 10.5V19a1.5 1.5 0 001.5 1.5h3A1.5 1.5 0 0010.5 19V15a1.5 1.5 0 011.5-1.5h0A1.5 1.5 0 0113.5 15v4a1.5 1.5 0 001.5 1.5h3A1.5 1.5 0 0020 19v-8.5"
+                />
               </svg>
             </Link>
             <Link
@@ -42,7 +56,7 @@ export default function Header() {
                 aria-haspopup="true"
                 aria-expanded={isProductDropdownOpen}
               >
-                Sản phẩm
+                SẢN PHẨM
                 <svg
                   className={`w-5 h-5 transition-transform ${
                     isProductDropdownOpen ? "rotate-180" : ""
@@ -60,20 +74,11 @@ export default function Header() {
                 </svg>
               </button>
               {isProductDropdownOpen && (
-                <div
-                  className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] bg-white shadow-xl border border-gray-200 rounded-xl py-3 min-w-[220px] z-50 flex flex-col gap-1 animate-fadeIn"
-                  style={{ minWidth: 180 }}
-                >
-                  <Link
-                    href="/features"
-                    className="dropdown-link"
-                  >
+                <div className="absolute left-0 pl-[8px] top-full bg-white shadow-xl border border-gray-200 py-3 min-w-[200px] z-50 flex flex-col gap-1 animate-fadeIn pl">
+                  <Link href="/features" className="dropdown-link">
                     Ưu điểm nổi bật
                   </Link>
-                  <Link
-                    href="/main-products"
-                    className="dropdown-link"
-                  >
+                  <Link href="/main-products" className="dropdown-link">
                     Sản phẩm chính
                   </Link>
                 </div>
@@ -180,16 +185,10 @@ export default function Header() {
               </button>
               {isProductDropdownOpen && (
                 <div className="ml-4 mt-2 space-y-2">
-                  <Link
-                    href="/features"
-                    className="mobile-dropdown-link"
-                  >
+                  <Link href="/features" className="mobile-dropdown-link">
                     Ưu điểm nổi bật
                   </Link>
-                  <Link
-                    href="/main-products"
-                    className="mobile-dropdown-link"
-                  >
+                  <Link href="/main-products" className="mobile-dropdown-link">
                     Sản phẩm chính
                   </Link>
                 </div>
