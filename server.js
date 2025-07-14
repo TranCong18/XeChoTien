@@ -16,6 +16,8 @@ app.use("/api/auth", require("./routes/authRoutes"));
 // ✅ Route sản phẩm
 app.use("/api/products", require("./routes/productRoutes"));
 
+app.use("/api/news", require("./routes/newsRoutes"));
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
