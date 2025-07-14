@@ -52,34 +52,7 @@ export default function NewsListPage() {
           {/* Left sidebar (optional) */}
           <aside className="hidden md:block col-span-1">
             <div className="sticky top-28 space-y-4">
-              <div className="bg-white rounded-2xl shadow border border-gray-100 p-4 text-center">
-                <div className="text-lg font-bold text-[#b8001c] mb-2">
-                  Danh mục
-                </div>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  <li>
-                    <a href="#" className="hover:text-red-600">
-                      Tin nổi bật
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-red-600">
-                      Sản phẩm mới
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-red-600">
-                      Ưu đãi
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-red-600">
-                      Sự kiện
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-r from-[#b8001c] to-[#1a1a1a] rounded-2xl p-4 text-white shadow text-center">
+              <div className="bg-gradient-to-r from-[#17877b] to-[#7ee8c7] rounded-2xl p-6 text-white shadow text-center">
                 <div className="font-bold text-lg mb-2">Đăng ký nhận tin</div>
                 <p className="text-sm mb-3">
                   Nhận thông báo về sản phẩm, ưu đãi và sự kiện mới nhất từ
@@ -88,9 +61,10 @@ export default function NewsListPage() {
                 <input
                   type="email"
                   placeholder="Email của bạn"
-                  className="w-full px-3 py-2 rounded mb-2 text-black"
+                  className="w-full px-5 py-3 rounded-lg mb-3 text-white text-base border-none focus:ring-2 focus:ring-[#17877b] transition-all duration-200"
+                  style={{ minWidth: "220px" }}
                 />
-                <button className="w-full bg-white text-[#b8001c] font-bold rounded py-2 hover:bg-[#b8001c] hover:text-white transition">
+                <button className="w-full bg-white text-[#17877b] font-bold rounded-lg py-3 hover:bg-[#17877b] hover:text-white transition-all duration-200 text-base shadow">
                   Đăng ký
                 </button>
               </div>
@@ -130,7 +104,7 @@ export default function NewsListPage() {
                     </div>
                     <Link
                       href={`/news/${news.id}`}
-                      className="inline-block mt-auto px-5 py-2 bg-[#b8001c] text-white rounded-full font-semibold text-xs shadow hover:bg-[#a00018] transition-colors duration-200"
+                      className="inline-block mt-auto px-5 py-2 bg-[#22bfa2] text-white rounded-full font-semibold text-xs shadow hover:bg-[#17877b] transition-colors duration-200"
                     >
                       Xem chi tiết
                     </Link>
