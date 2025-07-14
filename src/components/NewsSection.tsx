@@ -1,12 +1,9 @@
-// File: src/components/NewsSection.tsx
-// ✅ Đường dẫn: src/components/NewsSection.tsx
-
 "use client";
 
+import Image from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const newsList = [
   {
@@ -27,11 +24,15 @@ const newsList = [
     image: "/images/news/test2.png",
     date: "25/04/2025",
   },
+  {
+    title: "Tăng cường bảo mật xe vận chuyển tiền",
+    description: "Trang bị khóa sinh trắc học và mã hóa dữ liệu đường truyền.",
+    image: "/images/news/test2.png",
+    date: "20/04/2025",
+  },
 ];
 
 const awards = [
-  "/images/award1.jpg",
-  "/images/award1.jpg",
   "/images/award1.jpg",
   "/images/award1.jpg",
   "/images/award1.jpg",
@@ -57,13 +58,12 @@ export default function NewsSection() {
     },
   });
 
-  // Autoplay
   useEffect(() => {
     let interval: NodeJS.Timeout;
     if (slider.current) {
       interval = setInterval(() => {
         slider.current?.next();
-      }, 2500); // 2.5 giây
+      }, 2500);
     }
     return () => clearInterval(interval);
   }, [slider]);
@@ -75,30 +75,52 @@ export default function NewsSection() {
           📰 Tin tức & Sự kiện
         </h2>
 
-        {/* Tin tức */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {newsList.map((news, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 border rounded-xl shadow hover:shadow-md overflow-hidden transition"
-            >
+        {/* Bố cục: Tin lớn bên trái, 3 tin nhỏ bên phải */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Tin chính bên trái */}
+          <div className="lg:col-span-2">
+            <div className="rounded-xl overflow-hidden shadow">
               <img
-                src={news.image}
-                alt={news.title}
-                className="w-full h-48 object-cover"
+                src={newsList[0].image}
+                alt={newsList[0].title}
+                className="w-full h-96 object-cover"
               />
-              <div className="p-4">
-                <p className="text-sm text-gray-500 mb-1">{news.date}</p>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {news.title}
+              <div className="bg-white p-6">
+                <p className="text-sm text-gray-500">{newsList[0].date}</p>
+                <h3 className="text-xl font-bold text-gray-800 mt-1">
+                  {newsList[0].title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-2">{news.description}</p>
+                <p className="text-sm text-gray-600 mt-2">
+                  {newsList[0].description}
+                </p>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* 3 tin phụ bên phải */}
+          <div className="space-y-4">
+            {newsList.slice(1, 4).map((news, idx) => (
+              <div
+                key={idx}
+                className="rounded-lg overflow-hidden border shadow"
+              >
+                <img
+                  src={news.image}
+                  alt={news.title}
+                  className="w-full h-28 object-cover"
+                />
+                <div className="bg-white p-3">
+                  <p className="text-xs text-gray-500">{news.date}</p>
+                  <h4 className="text-sm font-semibold text-gray-800">
+                    {news.title}
+                  </h4>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Giải thưởng */}
+        {/* Phần giải thưởng */}
         <h3 className="text-center text-green-700 text-xl font-semibold mt-12 mb-4">
           Ghi nhận của cộng đồng dành cho BIC
         </h3>

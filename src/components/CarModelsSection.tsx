@@ -1,12 +1,9 @@
-// File: src/components/NewsSection.tsx
-// ✅ Đường dẫn: src/components/NewsSection.tsx
-
 "use client";
+import { useState } from "react";
 import Slider from "react-slick";
+import clsx from "clsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
-import clsx from "clsx";
 
 const newsList = [
   {
@@ -84,7 +81,7 @@ export default function NewsSection() {
               <div key={index} className="px-2">
                 <div
                   className={clsx(
-                    "border rounded-xl overflow-hidden shadow transition-all duration-500",
+                    "group relative overflow-hidden rounded-xl shadow transition-all duration-500",
                     isActive
                       ? "bg-white scale-105 shadow-xl"
                       : "bg-gray-100 scale-95 opacity-50"
@@ -93,16 +90,14 @@ export default function NewsSection() {
                   <img
                     src={news.image}
                     alt={news.title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="p-4">
-                    <p className="text-sm text-gray-500 mb-1">{news.date}</p>
-                    <h3 className="text-lg font-semibold text-gray-800">
-                      {news.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-2">
-                      {news.description}
-                    </p>
+
+                  {/* Overlay hiển thị khi hover */}
+                  <div className="absolute inset-0 bg-black bg-opacity-60 text-white p-4 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end">
+                    <p className="text-sm">{news.date}</p>
+                    <h3 className="text-lg font-bold">{news.title}</h3>
+                    <p className="text-sm">{news.description}</p>
                   </div>
                 </div>
               </div>

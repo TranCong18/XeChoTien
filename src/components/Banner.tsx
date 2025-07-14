@@ -8,9 +8,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const bannerImages = [
-  "/images/banners/test2.png",
-  "/images/banners/test2.png",
-  "/images/banners/test2.png",
+  "/images/banners/xepajero1.png",
+  "/images/banners/isuzu.png",
+  "/images/banners/isuzu2.png",
   "/images/banners/test2.png",
   "/images/banners/test2.png",
 ];
