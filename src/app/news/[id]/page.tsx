@@ -28,7 +28,7 @@ export default function NewsDetailPage({ params }: NewsDetailPageProps) {
     <>
       <Header />
       {/* Banner Section */}
-      <section className="relative bg-gradient-to-r from-[#b8001c] to-[#1a1a1a] text-white py-20 overflow-hidden mb-0">
+      <section className="relative bg-gradient-to-r from-[#17877b] to-[#7ee8c7] text-white py-20 overflow-hidden mb-0">
         <div className="absolute inset-0 opacity-20 bg-[url('/images/cars/test2-removebg-preview.png')] bg-no-repeat bg-right bg-contain pointer-events-none" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
@@ -51,7 +51,7 @@ export default function NewsDetailPage({ params }: NewsDetailPageProps) {
         </div>
       </section>
 
-      <div className="w-full min-h-screen bg-gradient-to-b from-[#232325] via-[#232325] via-60% to-[#f7f7fa] pt-12 pb-24">
+      <div className="w-full min-h-screen bg-[#f7f7fa] pt-12 pb-24">
         <div className="max-w-4xl mx-auto py-8 px-4">
           {/* Main content */}
           <main>
@@ -151,7 +151,7 @@ export default function NewsDetailPage({ params }: NewsDetailPageProps) {
                   </div>
                   <Link
                     href="/news"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#b8001c] text-white rounded-full font-semibold text-sm shadow hover:bg-[#a00018] transition-colors duration-200"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#22bfa2] text-white rounded-full font-semibold text-sm shadow hover:bg-[#17877b] transition-colors duration-200"
                   >
                     <svg
                       width="16"

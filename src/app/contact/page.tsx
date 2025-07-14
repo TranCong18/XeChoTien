@@ -50,7 +50,7 @@ export default function ContactPage() {
             />
             <button
               type="submit"
-              className="mt-2 bg-[#b8001c] text-white font-bold rounded-full py-3 text-lg shadow hover:bg-[#a00018] transition-colors duration-200"
+              className="mt-2 bg-[#22bfa2] text-white font-bold rounded-full py-3 text-lg shadow hover:bg-[#17877b] transition-colors duration-200"
             >
               Gửi liên hệ
             </button>
